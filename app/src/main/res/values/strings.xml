@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RetoPMD</string>
+    <string name="setName">Nombre:</string>
+    <string name="setApel">Apellido:</string>
+    <string name="start">Empezar Test</string>
+    <string name="choose">Elige la serie:</string>
+    <string name="start_test">Empezar test</string>
+    <string-array name="series">
+        <item>Star Wars</item>
+        <item>Ricardo El Abuelo Molon y su Nieto Mortadelo</item>
+    </string-array>
+</resources>
