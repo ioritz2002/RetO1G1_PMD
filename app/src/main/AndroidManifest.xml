@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reto1PMD">
         <activity
+            android:name=".ResultadoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityElegir"
             android:exported="true" />
         <activity
