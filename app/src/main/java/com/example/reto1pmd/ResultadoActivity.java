@@ -48,6 +48,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 "WHERE valoracion > (? - 3)" +
                 "AND valoracion < (? + 3)", new String[] {String.valueOf(valoracionTotalObtenida), String.valueOf(valoracionTotalObtenidaº)});
 
+        //Si hay algun resultado
         if (cursor.getCount() > 0){
 
             while (cursor.moveToNext()){
