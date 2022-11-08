@@ -36,10 +36,10 @@ public class ResultadoActivity extends AppCompatActivity {
         btnCompartir = findViewById(R.id.btnCompartir);
 
         //Recibe los parametros de la ventana anterior
-        Bundle extras  = getIntent().getExtras();
+      /*  Bundle extras  = getIntent().getExtras();
         valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
         nombreUsuario = extras.getString("NOMBRE_USUARIO");
-
+*/
 
         database = SQLiteDatabase.openDatabase("reto1_g1_pmd_database", null, 0);
         //Paramentros: ambos son la valoracion obtenida
@@ -49,7 +49,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 "AND valoracion < (? + 3)", new String[] {String.valueOf(valoracionTotalObtenida), String.valueOf(valoracionTotalObtenidaº)});
 
         //Si hay algun resultado
-        if (cursor.getCount() > 0){
+       /* if (cursor.getCount() > 0){
 
             while (cursor.moveToNext()){
                 puntuacionPersonaje = cursor.getInt(0);
@@ -63,7 +63,7 @@ public class ResultadoActivity extends AppCompatActivity {
 
         } else {
             Toast toast = Toast.makeText(this, "Error al cargar", Toast.LENGTH_LONG);
-        }
+        }*/
 
 
         //btnAbrirWiki.setOnClickListener();
