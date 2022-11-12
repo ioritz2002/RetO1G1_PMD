@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,10 @@ public class ResultadoActivity extends AppCompatActivity {
         btnCompartir = findViewById(R.id.btnCompartir);
 
         //Recibe los parametros de la ventana anterior
-      /*  Bundle extras  = getIntent().getExtras();
-        valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
-        nombreUsuario = extras.getString("NOMBRE_USUARIO");
-*/
+        Bundle extras  = getIntent().getExtras();
+      /*  valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
+        nombreUsuario = extras.getString("NOMBRE_USUARIO"); */
+
 
         database = SQLiteDatabase.openDatabase("reto1_g1_pmd_database", null, 0);
         //Paramentros: ambos son la valoracion obtenida
@@ -59,7 +60,7 @@ public class ResultadoActivity extends AppCompatActivity {
             }
             //Parametros primero puntuacion personaje luego nombre usuario
             database.execSQL("UPDATE usuarios" +
-                    "SET puntuacion_personaje = ? WHERE usuarios.nombre LIKE ?");
+                    "SET puntuacion_personaje = ? WHERE usuarios.nombre LIKE ?" ,new String[] {String.valueOfI(puntuacionPersonaje), String.valueOf(nombreUsuario)});
 
         } else {
             Toast toast = Toast.makeText(this, "Error al cargar", Toast.LENGTH_LONG);
@@ -73,9 +74,11 @@ public class ResultadoActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent compartir = new Intent();
                         compartir.setAction(Intent.ACTION_SEND);
-                        compartir.setType("text/html");
+                        compartir.setType("text/plain");
+                        compartir.setData(Uri.parse(nombreUsuario + "El personaje correspondiente al personaje es: " + nombrePersonaje));
 
-
+                        Chooser chooser = Intent.createChooser(compartir, "Selecciona la aplicacion para abrir");
+                        startActivity(compartir);
                     }
                 }
         );
