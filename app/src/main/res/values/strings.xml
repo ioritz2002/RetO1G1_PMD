@@ -12,4 +12,7 @@
         <item>Star Wars</item>
         <item>Ricardo El Abuelo Molon y su Nieto Mortadelo</item>
     </string-array>
+    <string name="text_resultado">Eres </string>
+    <string name="text_btnAbrirWiki">Abrir en wiki</string>
+    <string name="text_btnCompartir">Compartir</string>
 </resources>
