@@ -11,7 +11,10 @@
         android:theme="@style/Theme.Reto1PMD">
         <activity
             android:name=".ActivityElegir"
-            android:exported="true" />
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

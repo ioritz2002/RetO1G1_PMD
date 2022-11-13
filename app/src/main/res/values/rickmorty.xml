@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rickmorty_question">
+        <item>Pregunta 1</item>
+        <item>Pregunta 2</item>
+        <item>Pregunta 3</item>
+        <item>Pregunta 4</item>
+        <item>Pregunta 5</item>
+    </string-array>
+    <string-array name="rickmorty_opc_1">
+        <item>Opc 1</item>
+        <item>Opc 2</item>
+        <item>Opc 3</item>
+        <item>Opc 4</item>
+        <item>Opc 5</item>
+    </string-array>
+
+    <string-array name="rickmorty_opc_2">
+        <item>Opc 1</item>
+        <item>Opc 2</item>
+        <item>Opc 3</item>
+        <item>Opc 4</item>
+        <item>Opc 5</item>
+    </string-array>
+    <string-array name="rickmorty_opc_3">
+        <item>Opc 1</item>
+        <item>Opc 2</item>
+        <item>Opc 3</item>
+        <item>Opc 4</item>
+        <item>Opc 5</item>
+    </string-array>
+    <string-array name="rickmorty_opc_4">
+        <item>Opc 1</item>
+        <item>Opc 2</item>
+        <item>Opc 3</item>
+        <item>Opc 4</item>
+        <item>Opc 5</item>
+    </string-array>
+    <string-array name="rickmorty_opc_5">
+        <item>Opc 1</item>
+        <item>Opc 2</item>
+        <item>Opc 3</item>
+        <item>Opc 4</item>
+        <item>Opc 5</item>
+    </string-array>
+</resources>
