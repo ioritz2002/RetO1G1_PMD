@@ -42,39 +42,42 @@
         <item>Un Caza Recompensas</item>
         <item>Un Droide</item>
     </string-array>
-    <string-array name="Anakin">
-        <item name="puntuacion_personaje">5</item>
-        <item name="nombre">Anakin Skywalker</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Anakin_Skywalker?so=search</item>
-    </string-array>
-    <string-array name="BabyYoda">
-        <item name="puntuacion_personaje">10</item>
-        <item name="nombre">Baby Yoda</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Grogu?so=search</item>
-    </string-array>
-    <string-array name="ObiWan">
-        <item name="puntuacion_personaje">15</item>
-        <item name="nombre">Obi-wan kenobi</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Obi-Wan_Kenobi</item>
-    </string-array>
-    <string-array name="Han">
-        <item name="puntuacion_personaje">20</item>
-        <item name="nombre">Han Solo</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
-    </string-array>
-    <string-array name="Luke">
-        <item name="puntuacion_personaje">25</item>
-        <item name="nombre">Luke Skywalker</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
-    </string-array>
+    <array name="Personajes_starWars">
+        <string-array name="Anakin">
+            <item name="puntuacion_personaje">5</item>
+            <item name="nombre">Anakin Skywalker</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://starwars.fandom.com/es/wiki/Anakin_Skywalker?so=search</item>
+        </string-array>
+        <string-array name="BabyYoda">
+            <item name="puntuacion_personaje">10</item>
+            <item name="nombre">Baby Yoda</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://starwars.fandom.com/es/wiki/Grogu?so=search</item>
+        </string-array>
+        <string-array name="ObiWan">
+            <item name="puntuacion_personaje">15</item>
+            <item name="nombre">Obi-wan kenobi</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://starwars.fandom.com/es/wiki/Obi-Wan_Kenobi</item>
+        </string-array>
+        <string-array name="Han">
+            <item name="puntuacion_personaje">20</item>
+            <item name="nombre">Han Solo</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        </string-array>
+        <string-array name="Luke">
+            <item name="puntuacion_personaje">25</item>
+            <item name="nombre">Luke Skywalker</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        </string-array>
+    </array>
+
 </resources>
