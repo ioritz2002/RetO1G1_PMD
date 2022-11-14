@@ -74,7 +74,6 @@ public class QuestionActivity extends AppCompatActivity {
         // Check what series is selected to store the questions and the options
         if (serie.equalsIgnoreCase(starWars)) {
             List<String> questionList = Arrays.asList(res.getStringArray(R.array.starwars_question));
-
             questionOpc.put(questionList.get(0), Arrays.asList(res.getStringArray(R.array.starwars_opc_1)));
             questionOpc.put(questionList.get(1), Arrays.asList(res.getStringArray(R.array.starwars_opc_2)));
             questionOpc.put(questionList.get(2), Arrays.asList(res.getStringArray(R.array.starwars_opc_3)));
@@ -163,7 +162,6 @@ public class QuestionActivity extends AppCompatActivity {
             intent.putExtra("puntuacion", result);
             ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
             startActivityForResult(intent, MainActivity.RESULT_ACTIVITY, options.toBundle());
-
         });
         testLinear.addView(btnFinish);
 

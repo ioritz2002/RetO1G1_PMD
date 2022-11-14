@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
+import androidx.annotation.NonNull;
+
 public class DBHelper extends SQLiteOpenHelper implements BaseColumns {
 
     public static final int DATABASE_VERSION = 1;
@@ -22,6 +24,7 @@ public class DBHelper extends SQLiteOpenHelper implements BaseColumns {
     public static final String TABLE_NAME_CHARACTER = "t_character";
     public static final String CHARACTER_COLUMN_NAME = "nombre";
     public static final String CHARACTER_COLUMN_IMG = "img";
+    public static final String CHARACTER_COLUMN_VID = "vid";
     public static final String CHARACTER_COLUMN_URL = "url";
     public static final String CHARACTER_COLUMN_POINT = "puntiacion";
 
@@ -43,6 +46,7 @@ public class DBHelper extends SQLiteOpenHelper implements BaseColumns {
                     _ID + "INTEGER PRIMARY KEY," +
                     CHARACTER_COLUMN_NAME + "VARCHAR," +
                     CHARACTER_COLUMN_IMG + "VARCHAR," +
+                    CHARACTER_COLUMN_VID + "VARCHAR," +
                     CHARACTER_COLUMN_POINT + "INTEGER," +
                     CHARACTER_COLUMN_URL + "TIMESTAMP)";
 
@@ -55,12 +59,12 @@ public class DBHelper extends SQLiteOpenHelper implements BaseColumns {
 
     }
 
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(@NonNull SQLiteDatabase db) {
         db.execSQL(CREATE_USER_TABLE);
         db.execSQL(CREATE_CHARACTER_TABLE);
     }
 
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(@NonNull SQLiteDatabase db, int oldVersion, int newVersion) {
         // This database is only a cache for online data, so its upgrade policy is
         // to simply to discard the data and start over
         db.execSQL(SQL_DELETE_USER);
