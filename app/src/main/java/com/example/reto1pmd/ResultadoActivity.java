@@ -131,9 +131,7 @@ public class ResultadoActivity extends AppCompatActivity {
         String rickMorty = Arrays.asList(res.getStringArray(R.array.series)).get(1);
 
         if (serie.equalsIgnoreCase(starWars)){
-            for (int i = 0; i < Arrays.asList(res.getStringArray(R.array.Personajes_starWars)).size(); i++){
 
-            }
         }
         else if(serie.equalsIgnoreCase(rickMorty)){
 
