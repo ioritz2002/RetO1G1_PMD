@@ -16,4 +16,5 @@
     <string name="text_btnAbrirWiki">Abrir en wiki</string>
     <string name="text_btnCompartir">Compartir</string>
     <string name="text_chooserMessage">Seleccione la aplicacion con la que desea abrir</string>
+    <string name="text_btnFinish">Ver Resultado</string>
 </resources>
