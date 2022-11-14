@@ -1,6 +1,7 @@
 package com.example.reto1pmd;
 
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -51,6 +52,7 @@ public class DBHelper extends SQLiteOpenHelper implements BaseColumns {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+
     }
 
     public void onCreate(SQLiteDatabase db) {

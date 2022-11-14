@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase dataBase = null;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +60,10 @@ public class MainActivity extends AppCompatActivity {
                     mp.start();
                     Intent intent = new Intent(this, QuestionActivity.class);
                     intent.putExtra("serie", Arrays.asList(res.getStringArray(R.array.series)).get(0));
-                    ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
-                    startActivityForResult(intent, QUESTION_ACTIVITY, options.toBundle());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
+                        startActivityForResult(intent, QUESTION_ACTIVITY, options.toBundle());
+                    }
                 });
 
 
