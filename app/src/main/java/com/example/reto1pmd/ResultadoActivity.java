@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class ResultadoActivity extends AppCompatActivity {
     private Integer valoracionTotalObtenida;
+    private Integer idUsuario;
     private String nombreUsuario;
     private TextView textResultado;
     private ImageView imgPersonaje;
@@ -24,6 +25,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private Integer puntuacionPersonaje;
     private String nombrePersonaje;
     private String urlWiki;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +39,28 @@ public class ResultadoActivity extends AppCompatActivity {
         btnCompartir = findViewById(R.id.btnCompartir);
 
         //Recibe los parametros de la ventana anterior
-        Bundle extras = getIntent().getExtras();
-      /*  valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
-        nombreUsuario = extras.getString("NOMBRE_USUARIO"); */
-
+        Bundle extras  = getIntent().getExtras();
+        valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
 
         database = SQLiteDatabase.openDatabase("reto1_g1_pmd_database", null, 0);
+
+        //Obtener el id de usuario y el nombre al que le vamos a introducir el personaje que le a salido
+        cursor = database.rawQuery("SELECT ID_USUARIO, NOMBRE" +
+                " FROM usuarios WHERE HORA_REGISTRO IN (SELECT MAX(HORA_REGISTRO) FROM usuarios)", null);
+        if (cursor.getCount() > 0){
+            while (cursor.moveToNext()){
+                idUsuario = cursor.getInt(0);
+                nombreUsuario = cursor.getString(1);
+            }
+        }
+
         //Paramentros: ambos son la valoracion obtenida
-        //Cursor cursor = database.rawQuery("SELECT * " +
-        //        "FROM personajes" +
-        //        "WHERE valoracion > (? - 3)" +
-        //       "AND valoracion < (? + 3)", new String[] {String.valueOf(valoracionTotalObtenida), String.valueOf(valoracionTotalObtenidaº)});
+        cursor = database.rawQuery("SELECT * " +
+                "FROM personajes WHERE valoracion > (? - 3)" +
+                "AND valoracion < (? + 3)", new String[] {String.valueOf(valoracionTotalObtenida), String.valueOf(valoracionTotalObtenida)});
 
         //Si hay algun resultado
-       /* if (cursor.getCount() > 0){
+        if (cursor.getCount() > 0){
 
             while (cursor.moveToNext()){
                 puntuacionPersonaje = cursor.getInt(0);
@@ -59,12 +69,11 @@ public class ResultadoActivity extends AppCompatActivity {
                 urlWiki = cursor.getString(3);
             }
             //Parametros primero puntuacion personaje luego nombre usuario
-            database.execSQL("UPDATE usuarios" +
-                    "SET puntuacion_personaje = ? WHERE usuarios.nombre LIKE ?" ,new String[] {String.valueOfI(puntuacionPersonaje), String.valueOf(nombreUsuario)});
+            database.execSQL("UPDATE usuarios SET puntuacion_personaje = ? WHERE usuarios.ID_USUARIO = ?" ,new String[] {String.valueOf(puntuacionPersonaje), String.valueOf(idUsuario)});
 
         } else {
             Toast toast = Toast.makeText(this, "Error al cargar", Toast.LENGTH_LONG);
-        }*/
+        }
 
 
         //btnAbrirWiki.setOnClickListener();
@@ -77,8 +86,21 @@ public class ResultadoActivity extends AppCompatActivity {
                         compartir.setType("text/plain");
                         compartir.setData(Uri.parse(nombreUsuario + "El personaje correspondiente al personaje es: " + nombrePersonaje));
 
-                        Intent chooser = Intent.createChooser(compartir, "Selecciona la aplicacion para abrir");
-                        startActivity(compartir);
+                        Intent chooser = Intent.createChooser(compartir, getString(R.string.text_chooserMessage));
+                        startActivity(chooser);
+                    }
+                }
+        );
+
+        btnAbrirWiki.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent wiki = new Intent(Intent.ACTION_WEB_SEARCH);
+                        wiki.setData(Uri.parse(urlWiki));
+
+                        Intent chooser = Intent.createChooser(wiki, getString(R.string.text_chooserMessage));
+                        startActivity(chooser);
                     }
                 }
         );
