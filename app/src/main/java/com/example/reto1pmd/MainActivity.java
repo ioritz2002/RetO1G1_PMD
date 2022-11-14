@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         start = (Button) findViewById(R.id.startButton);
 
         start = findViewById(R.id.startButton);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein);
         start.setOnClickListener(
                 (View v) -> {
                     mp.start();

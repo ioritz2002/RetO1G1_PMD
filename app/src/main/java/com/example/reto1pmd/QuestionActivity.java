@@ -63,7 +63,7 @@ public class QuestionActivity extends AppCompatActivity {
         String selectedSerie = extra.getString("serie");
         createMap(selectedSerie);
         createButtons();
-        showResult();
+        showResult(selectedSerie);
     }
 
     private void createMap(@NonNull String serie) {
@@ -147,7 +147,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     }
 
-    private void showResult() {
+    private void showResult(String serie) {
         LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         btnParams.setMargins(100, 100, 100, 125);
         btnFinish = new Button(this);
@@ -158,6 +158,7 @@ public class QuestionActivity extends AppCompatActivity {
         btnFinish.setOnClickListener(OnClickListener -> {
             mp.start();
             Intent intent = new Intent(this, ResultadoActivity.class);
+            intent.putExtra("serie", serie);
             intent.putExtra("puntuacion", result);
             ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
             startActivityForResult(intent, MainActivity.RESULT_ACTIVITY, options.toBundle());
