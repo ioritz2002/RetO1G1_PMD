@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reto1PMD">
+        <service
+            android:name=".BackgroundSound"/>
+
         <activity
             android:name=".ResultadoActivity"
             android:exported="false" />

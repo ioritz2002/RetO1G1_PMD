@@ -1,18 +1,23 @@
 package com.example.reto1pmd;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -28,11 +33,17 @@ import java.util.TreeMap;
 
 public class QuestionActivity extends AppCompatActivity {
 
-    private Resources res = null;
+    // Variables
     private Map<String, List<String>> questionOpc = null;
-    private LinearLayout testLinear = null;
     private Integer result = 0;
+
+    // Android items
+    private Resources res = null;
+    private LinearLayout testLinear = null;
     private TextView resultTest = null;
+    private Button btnFinish = null;
+    private MediaPlayer mp = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,8 @@ public class QuestionActivity extends AppCompatActivity {
         res = getResources();
         questionOpc = new TreeMap<>();
         resultTest = new TextView(this);
+        mp = MediaPlayer.create(this, R.raw.show_result);
+        mp.setVolume(50, 50);
 
         // Get linear layout
         testLinear = findViewById(R.id.testLinearLayout);
@@ -50,10 +63,10 @@ public class QuestionActivity extends AppCompatActivity {
         String selectedSerie = extra.getString("serie");
         createMap(selectedSerie);
         createButtons();
-
+        showResult();
     }
 
-    private void createMap(String serie) {
+    private void createMap(@NonNull String serie) {
         // Get series name
         String starWars = Arrays.asList(res.getStringArray(R.array.series)).get(0);
         String rickMorty = Arrays.asList(res.getStringArray(R.array.series)).get(1);
@@ -80,7 +93,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void createButtons() {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(100, 100, 100, 0);
+        params.setMargins(100, 0, 100, 0);
         TextView[] textViews = new TextView[5];
         RadioGroup[] rg = new RadioGroup[5];
         RadioButton[] rb = new RadioButton[5];
@@ -133,6 +146,26 @@ public class QuestionActivity extends AppCompatActivity {
             testLinear.addView(rg[i]);
             i++;
         }
+
     }
 
+    private void showResult() {
+        LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        btnParams.setMargins(100, 100, 100, 125);
+        btnFinish = new Button(this);
+        btnFinish.setText(getString(R.string.text_btnFinish));
+        btnFinish.setTextSize(30);
+        btnFinish.setLayoutParams(btnParams);
+        btnFinish.setBackgroundColor(Color.CYAN);
+        btnFinish.setOnClickListener(OnClickListener -> {
+            mp.start();
+            Intent intent = new Intent(this, ResultadoActivity.class);
+            intent.putExtra("puntuacion", result);
+            ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
+            startActivityForResult(intent, MainActivity.RESULT_ACTIVITY, options.toBundle());
+
+        });
+        testLinear.addView(btnFinish);
+
+    }
 }

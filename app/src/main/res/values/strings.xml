@@ -15,4 +15,5 @@
     <string name="text_resultado">Eres </string>
     <string name="text_btnAbrirWiki">Abrir en wiki</string>
     <string name="text_btnCompartir">Compartir</string>
+    <string name="text_btnFinish">Ver Resultado</string>
 </resources>
