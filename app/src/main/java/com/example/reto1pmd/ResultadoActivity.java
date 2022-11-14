@@ -75,7 +75,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 urlWiki = cursor.getString(4);
             }
             //Parametros primero puntuacion personaje luego nombre usuario
-            database.execSQL("UPDATE t_user SET t_user.puntuacion = ? WHERE t_user._id = ?" ,new String[] {String.valueOf(idPersonaje), String.valueOf(idUsuario)});
+            database.execSQL("UPDATE t_user SET t_user.puntuacion = ? WHERE t_user._id = ?" ,new String[] {String.valueOf(puntuacionPersonaje), String.valueOf(idUsuario)});
 
         } else {
             Toast.makeText(this, "Error al cargar", Toast.LENGTH_LONG).show();
