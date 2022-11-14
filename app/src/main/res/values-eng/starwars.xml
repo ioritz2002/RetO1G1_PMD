@@ -1,0 +1,45 @@
+<resources>
+    <string-array name="starwars_question">
+        <item>1. What color do you like more?</item>
+        <item>2. What kind of ship would you have?</item>
+        <item>3. What would you keep in the fridge?</item>
+        <item>4. If you have 6 children and 3 chairs, what do you do?</item>
+        <item>5. Who would be your partner?</item>
+    </string-array>
+    <string-array name="starwars_opc_1">
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Yellow</item>
+    </string-array>
+
+    <string-array name="starwars_opc_2">
+        <item>Milleinum Falcon</item>
+        <item>X Wing</item>
+        <item>Tie Fighter</item>
+        <item>Razor Crest</item>
+        <item>Imperial Destructor</item>
+    </string-array>
+    <string-array name="starwars_opc_3">
+        <item>Vegetables</item>
+        <item>Coca Cola</item>
+        <item>Milk</item>
+        <item>Dark Ice Cream</item>
+        <item>Soup</item>
+    </string-array>
+    <string-array name="starwars_opc_4">
+        <item>I bring 3 other chairs</item>
+        <item>The other 3 children sit on the floor</item>
+        <item>Nothing</item>
+        <item>I am one of the children</item>
+        <item>Kill the children</item>
+    </string-array>
+    <string-array name="starwars_opc_5">
+        <item>A Wookie</item>
+        <item>A Stormtrooper</item>
+        <item>A Jedi</item>
+        <item>A Bounty Hunter</item>
+        <item>A Droid</item>
+    </string-array>
+</resources>
