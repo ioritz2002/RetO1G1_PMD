@@ -29,6 +29,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private VideoView videoPersonaje;
     private String urlWiki;
     private Cursor cursor;
+    private DBManager dbManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +46,19 @@ public class ResultadoActivity extends AppCompatActivity {
         Bundle extras  = getIntent().getExtras();
         valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
 
-        database = SQLiteDatabase.openDatabase("reto1_g1_pmd_database", null, 0);
+        dbManager = new DBManager(this);
+        dbManager.open();
+       // database = SQLiteDatabase.openDatabase("reto1_g1_pmd_database", null, 0);
 
         //Obtener el id de usuario y el nombre al que le vamos a introducir el personaje que le a salido
-        cursor = database.rawQuery("SELECT u._id, u.nombre" +
-                " FROM t_user u WHERE u.hora IN (SELECT MAX(u.hora) FROM t_user u)", null);
+        cursor = dbManager.select_UltimoUsuario();
         if (cursor.getCount() > 0){
-            while (cursor.moveToNext()){
+            do {
                 idUsuario = cursor.getInt(0);
                 nombreUsuario = cursor.getString(1);
-            }
+            } while (cursor.moveToNext());
         }
+        dbManager.close();
 
         //Paramentros: ambos son la valoracion obtenida
         cursor = database.rawQuery("SELECT * " +
@@ -75,7 +78,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 urlWiki = cursor.getString(4);
             }
             //Parametros primero puntuacion personaje luego nombre usuario
-            database.execSQL("UPDATE t_user SET t_user.puntuacion = ? WHERE t_user._id = ?" ,new String[] {String.valueOf(puntuacionPersonaje), String.valueOf(idUsuario)});
+           // database.execSQL("UPDATE t_user SET t_user.puntuacion = ? WHERE t_user._id = ?" ,new String[] {String.valueOf(puntuacionPersonaje), String.valueOf(idUsuario)});
 
         } else {
             Toast.makeText(this, "Error al cargar", Toast.LENGTH_LONG).show();

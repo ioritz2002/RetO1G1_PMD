@@ -38,8 +38,8 @@ public class DBManager {
 
     public Cursor select_UltimoUsuario(){
         String[] cols = new String[] {
-                DBHelper._ID,
-                DBHelper.USER_COLUMN_NAME
+                dbHelper._ID,
+                dbHelper.USER_COLUMN_NAME
         };
         Cursor cursor = database.query(dbHelper.TABLE_NAME_USER, cols, dbHelper.USER_COLUMN_TIME + " IN " + "(SELECT MAX(" + dbHelper.USER_COLUMN_TIME + ") FROM " +  dbHelper.TABLE_NAME_USER+ " )", null, null, null, null);
 
