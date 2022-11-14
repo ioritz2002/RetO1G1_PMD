@@ -18,4 +18,5 @@
     <string name="text_btnCompartir">Compartir</string>
     <string name="text_chooserMessage">Seleccione la aplicacion con la que desea abrir</string>
     <string name="text_btnFinish">Ver Resultado</string>
+    <string name="error_text">Error debes de añadir su nombre y apellidos</string>
 </resources>

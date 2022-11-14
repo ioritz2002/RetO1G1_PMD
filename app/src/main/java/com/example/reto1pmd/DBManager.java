@@ -28,27 +28,35 @@ public class DBManager {
         }
     }
 
-    public Integer update_PuntuacionUsuario(Integer idUsuario, Integer puntuacionPersonaje){
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(dbHelper.USER_COLUMN_POINT, puntuacionPersonaje);
-
-        return database.update(dbHelper.TABLE_NAME_USER, contentValues,
-                dbHelper._ID + " = " + idUsuario , null);
+    public void insertUser(String name, String lastname) {
+        ContentValues contentValue = new ContentValues();
+        contentValue.put(DBHelper.USER_COLUMN_NAME, name);
+        contentValue.put(DBHelper.USER_COLUMN_LASTNAME, lastname);
+        database.insert(DBHelper.TABLE_NAME_USER, null, contentValue);
     }
 
-    public Cursor select_UltimoUsuario(){
-        String[] cols = new String[] {
-                dbHelper._ID,
-                dbHelper.USER_COLUMN_NAME
-        };
-        Cursor cursor = database.query(dbHelper.TABLE_NAME_USER, cols, dbHelper.USER_COLUMN_TIME + " IN " + "(SELECT MAX(" + dbHelper.USER_COLUMN_TIME + ") FROM " +  dbHelper.TABLE_NAME_USER+ " )", null, null, null, null);
+    public Boolean update_PuntuacionUsuario(Integer idUsuario, Integer puntuacion) {
+        database.execSQL("UPDATE " + dbHelper.TABLE_NAME_USER +
+                " SET " + dbHelper.USER_COLUMN_POINT + "=" + puntuacion +
+                " WHERE "+ dbHelper.USER_COLUMN_ID + "=" + idUsuario);
 
-        if (cursor != null){
-            cursor.moveToNext();
+        return true;
+    }
+
+    public Cursor select_UltimoUsuario() {
+        Cursor cursor = database.rawQuery(
+                "select " +
+                        "rowid" + "," +
+                        dbHelper.USER_COLUMN_NAME + "," +
+                        dbHelper.USER_COLUMN_LASTNAME +
+                        " from " + dbHelper.TABLE_NAME_USER +
+                        " order by " + dbHelper.USER_COLUMN_TIME + " DESC LIMIT 1", null);
+
+        if (cursor != null) {
+            cursor.moveToFirst();
         }
         return cursor;
     }
-
 
 
 }

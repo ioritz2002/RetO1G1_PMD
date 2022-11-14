@@ -18,4 +18,5 @@
     <string name="text_btnCompartir">Share</string>
     <string name="text_chooserMessage">Select the application you want to open with</string>
     <string name="text_btnFinish">See Result</string>
+    <string name="error_text">Error you have to insert your name and lastname</string>
 </resources>

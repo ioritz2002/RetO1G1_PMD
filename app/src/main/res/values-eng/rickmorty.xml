@@ -43,41 +43,30 @@
         <item>A Pizza</item>
         <item>Get 7 boxes of valerian back</item>
     </string-array>
-    <string-array name="puntuacion_personajes_rickMorty">
-        <item name="Rick">5</item>
-        <item name="Morty">10</item>
-        <item name="Summer">15</item>
-        <item name="Sr.Meeseeks">20</item>
-        <item name="Jerry">25</item>
-    </string-array>
+
     <string-array name="Rick">
         <item name="nombre">Rick Sanchez</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Rick_S%C3%A1nchez?so=search</item>
+        <item>5</item>
     </string-array>
     <string-array name="Morty">
         <item name="nombre">Morty Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Morty_Smith?so=search</item>
+        <item>10</item>
     </string-array>
     <string-array name="Summer">
         <item name="nombre">Summer Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Summer_Smith?so=search</item>
+        <item>15</item>
     </string-array>
     <string-array name="Sr.Meeseeks">
         <item name="nombre">Sr. Meesseks</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Meeseeks</item>
+        <item>20</item>
     </string-array>
     <string-array name="Jerry">
         <item name="nombre">Jerry Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith?so=search</item>
+        <item>25</item>
     </string-array>
 </resources>

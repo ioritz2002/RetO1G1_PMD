@@ -43,42 +43,30 @@
         <item>A Droid</item>
     </string-array>
 
-    <string-array name="puntuacion_personajes_starWars">
-        <item name="Anakin">5</item>
-        <item name="BabyYoda">10</item>
-        <item name="ObiWan">15</item>
-        <item name="Han">20</item>
-        <item name="Luke">25</item>
-    </string-array>
     <string-array name="Anakin">
         <item name="nombre">Anakin Skywalker</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://starwars.fandom.com/es/wiki/Anakin_Skywalker?so=search</item>
+        <item>5</item>
     </string-array>
     <string-array name="BabyYoda">
         <item name="nombre">Baby Yoda</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://starwars.fandom.com/es/wiki/Grogu?so=search</item>
+        <item>10</item>
     </string-array>
     <string-array name="ObiWan">
         <item name="nombre">Obi-wan kenobi</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://starwars.fandom.com/es/wiki/Obi-Wan_Kenobi</item>
+        <item>15</item>
     </string-array>
     <string-array name="Han">
         <item name="nombre">Han Solo</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        <item>20</item>
     </string-array>
     <string-array name="Luke">
         <item name="nombre">Luke Skywalker</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
         <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        <item>25</item>
     </string-array>
 
 </resources>
