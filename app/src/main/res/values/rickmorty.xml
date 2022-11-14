@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="rickmorty_question">
-        <item>Pregunta 1</item>
-        <item>Pregunta 2</item>
-        <item>Pregunta 3</item>
-        <item>Pregunta 4</item>
-        <item>Pregunta 5</item>
+        <item>1. Que te gustaria tener?</item>
+        <item>2. Que te gusta beber?</item>
+        <item>3. Que te meterias por el recto anal?</item>
+        <item>4. Tienes que ir a terapia familiar, que haces?</item>
+        <item>5. Sin animo de lucro, tu que prefieres?</item>
     </string-array>
     <string-array name="rickmorty_opc_1">
-        <item>Opc 1</item>
-        <item>Opc 2</item>
-        <item>Opc 3</item>
-        <item>Opc 4</item>
-        <item>Opc 5</item>
+        <item>Una pistola de portales</item>
+        <item>Una metralleta</item>
+        <item>Una nave espacial</item>
+        <item>Un avion del 11-S</item>
+        <item>Un casco de realidad virtual</item>
     </string-array>
 
     <string-array name="rickmorty_opc_2">
-        <item>Opc 1</item>
-        <item>Opc 2</item>
-        <item>Opc 3</item>
-        <item>Opc 4</item>
-        <item>Opc 5</item>
+        <item>Cerveza</item>
+        <item>Mountain Dew</item>
+        <item>Agua</item>
+        <item>Leche</item>
+        <item>Un Batido de Proteinas</item>
     </string-array>
     <string-array name="rickmorty_opc_3">
-        <item>Opc 1</item>
-        <item>Opc 2</item>
-        <item>Opc 3</item>
-        <item>Opc 4</item>
-        <item>Opc 5</item>
+        <item>Una Semilla del tamaño de un Coco</item>
+        <item>Un Pepinillo Parlante</item>
+        <item>Un Cubo del Minecraft</item>
+        <item>Un Hamster</item>
+        <item>Un Dildo</item>
     </string-array>
     <string-array name="rickmorty_opc_4">
-        <item>Opc 1</item>
-        <item>Opc 2</item>
-        <item>Opc 3</item>
-        <item>Opc 4</item>
-        <item>Opc 5</item>
+        <item>Transformarme en Pepinillo para no ir</item>
+        <item>Insultar al Terapueta</item>
+        <item>Desnudarte en medio de la terapia</item>
+        <item>Nada, no tengo familia</item>
+        <item>Joderte e ir</item>
     </string-array>
     <string-array name="rickmorty_opc_5">
-        <item>Opc 1</item>
-        <item>Opc 2</item>
-        <item>Opc 3</item>
-        <item>Opc 4</item>
-        <item>Opc 5</item>
+        <item>Una barca a pedales</item>
+        <item>Una bicicleta</item>
+        <item>Una tortilla de patata</item>
+        <item>Una Pizza</item>
+        <item>Que te devuelvan 7 cajas de valerianas</item>
     </string-array>
 </resources>

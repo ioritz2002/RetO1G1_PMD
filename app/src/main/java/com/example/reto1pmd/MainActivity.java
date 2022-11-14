@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase dataBase = null;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,13 +58,16 @@ public class MainActivity extends AppCompatActivity {
         start.setOnClickListener(
                 (View v) -> {
                     mp.start();
-                    Intent intent = new Intent(this, QuestionActivity.class);
-                    intent.putExtra("serie", Arrays.asList(res.getStringArray(R.array.series)).get(0));
-                    ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
-                    startActivityForResult(intent, QUESTION_ACTIVITY, options.toBundle());
+                    Intent intent = new Intent(this, ActivityElegir.class);
+                    intent.putExtra("nombre", setNombre.getText().toString());
+                    intent.putExtra("apellido", setApellido.getText().toString());
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        ActivityOptions options = ActivityOptions.makeCustomAnimation(this, R.anim.fadein, R.anim.fadeout);
+                        startActivityForResult(intent, QUESTION_ACTIVITY, options.toBundle());
+                    }else{
+                        startActivityForResult(intent, QUESTION_ACTIVITY);
+                    }
                 });
-
-
         Intent soundService = new Intent(MainActivity.this, BackgroundSound.class);
         startService(soundService);
     }

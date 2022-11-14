@@ -8,6 +8,7 @@
     <string name="title_activity_question">Responde a las siguientes preguntas</string>
     <string name="action_settings">Settings</string>
     <string name="scroll">Vista desplazable</string>
+    <string name="hello">Hola</string>
     <string-array name="series">
         <item>Star Wars</item>
         <item>Ricardo El Abuelo Molon y su Nieto Mortadelo</item>

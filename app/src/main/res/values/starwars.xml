@@ -1,45 +1,45 @@
 <resources>
     <string-array name="starwars_question">
-        <item>Pregunta 1</item>
-        <item>Pregunta 2</item>
-        <item>Pregunta 3</item>
-        <item>Pregunta 4</item>
-        <item>Pregunta 5</item>
+        <item>1. Que color te gusta mas?</item>
+        <item>2. Que tipo de nave tendrias?</item>
+        <item>3. Que guardarias en la nevera?</item>
+        <item>4. Si tienes 6 niños y 3 sillas, que haces?</item>
+        <item>5. Quien seria tu compañero?</item>
     </string-array>
     <string-array name="starwars_opc_1">
-        <item>1Opc 1</item>
-        <item>1Opc 2</item>
-        <item>1Opc 3</item>
-        <item>1Opc 4</item>
-        <item>1Opc 5</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Rojo</item>
+        <item>Morado</item>
+        <item>Amarillo</item>
     </string-array>
 
     <string-array name="starwars_opc_2">
-        <item>2Opc 1</item>
-        <item>2Opc 2</item>
-        <item>2Opc 3</item>
-        <item>2Opc 4</item>
-        <item>2Opc 5</item>
+        <item>Halcon Milenario</item>
+        <item>Ala X</item>
+        <item>Tie Fighter</item>
+        <item>Razor Crest</item>
+        <item>Destructor Imperial</item>
     </string-array>
     <string-array name="starwars_opc_3">
-        <item>3Opc 1</item>
-        <item>3Opc 2</item>
-        <item>3Opc 3</item>
-        <item>3Opc 4</item>
-        <item>3Opc 5</item>
+        <item>Verduras</item>
+        <item>Coca Cola</item>
+        <item>Leche</item>
+        <item>Helado Oscuro</item>
+        <item>Sopa</item>
     </string-array>
     <string-array name="starwars_opc_4">
-        <item>4Opc 1</item>
-        <item>4Opc 2</item>
-        <item>4Opc 3</item>
-        <item>4Opc 4</item>
-        <item>4Opc 5</item>
+        <item>Traigo otras 3 sillas</item>
+        <item>Los otros 3 niños se sientan en el suelo</item>
+        <item>Nada</item>
+        <item>Soy uno de los niños</item>
+        <item>Matar a los niños</item>
     </string-array>
     <string-array name="starwars_opc_5">
-        <item>5Opc 1</item>
-        <item>5Opc 2</item>
-        <item>5Opc 3</item>
-        <item>5Opc 4</item>
-        <item>5Opc 5</item>
+        <item>Un Wookie</item>
+        <item>Un Stormtrooper</item>
+        <item>Un Jedi</item>
+        <item>Un Caza Recompensas</item>
+        <item>Un Droide</item>
     </string-array>
 </resources>
