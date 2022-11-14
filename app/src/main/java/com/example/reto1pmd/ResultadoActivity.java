@@ -2,16 +2,20 @@ package com.example.reto1pmd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
+
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -171,6 +175,8 @@ public class ResultadoActivity extends AppCompatActivity {
         u = Uri.parse(path);
         videoPersonaje.setVideoURI(u);
         videoPersonaje.start();
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
+        imgPersonaje.startAnimation(animation);
 
     }
 }
