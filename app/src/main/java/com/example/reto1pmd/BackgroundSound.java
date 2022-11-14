@@ -8,9 +8,15 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class BackgroundSound extends Service {
 
     MediaPlayer mediaPlayer;
+    public List<Integer> music = new ArrayList<>();
+
 
     @Nullable
     @Override
@@ -21,20 +27,18 @@ public class BackgroundSound extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaPlayer = MediaPlayer.create(this, R.raw.background_music_c418);
+        music.add(R.raw.background_music_c418);
+        music.add(R.raw.background_music_gwyn);
+        Collections.shuffle(music);
+
+        mediaPlayer = MediaPlayer.create(this, music.get(0));
         mediaPlayer.setLooping(true);
-        mediaPlayer.setVolume(50, 50);
+        mediaPlayer.setVolume(100, 100);
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {
         mediaPlayer.start();
-        Toast.makeText(getApplicationContext(),
-                "C418 - Subwoofer Lullaby", Toast.LENGTH_SHORT).show();
         return startId;
-    }
-
-    public void onStart(Intent intent, int startId) {
-
     }
 
     @Override
@@ -43,9 +47,4 @@ public class BackgroundSound extends Service {
         mediaPlayer.release();
     }
 
-    @Override
-    public void onLowMemory() {
-
-
-    }
 }
