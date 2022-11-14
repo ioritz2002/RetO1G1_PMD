@@ -64,7 +64,7 @@
         <item name="vid_personaje"></item>
         <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Summer_Smith?so=search</item>
     </string-array>
-    <string-array name="Sr. Meeseeks">
+    <string-array name="SrMeeseeks">
         <item name="puntuacion_personaje">20</item>
         <item name="nombre">Sr. Meesseks</item>
         <item name="img_personaje"></item>
