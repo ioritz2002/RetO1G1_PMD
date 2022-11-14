@@ -3,6 +3,7 @@ package com.example.reto1pmd;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -13,6 +14,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ResultadoActivity extends AppCompatActivity {
     private Integer valoracionTotalObtenida;
@@ -30,12 +37,16 @@ public class ResultadoActivity extends AppCompatActivity {
     private String urlWiki;
     private Cursor cursor;
     private DBManager dbManager;
+    private String serie;
+    private Map<String, List<String>> personajes;
+    private Resources res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
+        res = getResources();
         //Obtener los componentes
         textResultado = findViewById(R.id.txtResultado);
         imgPersonaje = findViewById(R.id.imgPersonaje);
@@ -45,6 +56,7 @@ public class ResultadoActivity extends AppCompatActivity {
         //Recibe los parametros de la ventana anterior
         Bundle extras  = getIntent().getExtras();
         valoracionTotalObtenida = extras.getInt("VALORACION_TOTAL_OBTENIDA");
+        serie = extras.getString("SERIE");
 
         dbManager = new DBManager(this);
         dbManager.open();
@@ -58,26 +70,29 @@ public class ResultadoActivity extends AppCompatActivity {
                 nombreUsuario = cursor.getString(1);
             } while (cursor.moveToNext());
         }
-        dbManager.close();
 
-        //Paramentros: ambos son la valoracion obtenida
+        //TODO Paramentros: ambos son la valoracion obtenida
+        personajes = new HashMap<>();
+        cargarPersonajes(serie, personajes);
+
+
+
         cursor = database.rawQuery("SELECT * " +
                 "FROM t_character c WHERE c.puntuacion > (? - 3)" +
                 "AND c.puntuacion < (? + 3)", new String[] {String.valueOf(valoracionTotalObtenida), String.valueOf(valoracionTotalObtenida)});
 
-        //Si hay algun resultado
+        // TODO Si hay algun resultado
         if (cursor.getCount() > 0){
 
             while (cursor.moveToNext()){
                 idPersonaje = cursor.getInt(0);
                 puntuacionPersonaje = cursor.getInt(1);
                 nombrePersonaje = cursor.getString(2);
-                //TODO Video y imagen
-                //imgPersonaje = cursor.getString(3);
-                //videoPersonaje =;
+
                 urlWiki = cursor.getString(4);
             }
             //Parametros primero puntuacion personaje luego nombre usuario
+            dbManager.update_PuntuacionUsuario(idUsuario, puntuacionPersonaje);
            // database.execSQL("UPDATE t_user SET t_user.puntuacion = ? WHERE t_user._id = ?" ,new String[] {String.valueOf(puntuacionPersonaje), String.valueOf(idUsuario)});
 
         } else {
@@ -106,5 +121,22 @@ public class ResultadoActivity extends AppCompatActivity {
                     startActivity(chooser);
                 }
         );
+
+        dbManager.close();
+
+    }
+
+    private void cargarPersonajes(String serie, Map<String, List<String>> personajes) {
+        String starWars = Arrays.asList(res.getStringArray(R.array.series)).get(0);
+        String rickMorty = Arrays.asList(res.getStringArray(R.array.series)).get(1);
+
+        if (serie.equalsIgnoreCase(starWars)){
+            for (int i = 0; i < Arrays.asList(res.getStringArray(R.array.Personajes_starWars)).size(); i++){
+
+            }
+        }
+        else if(serie.equalsIgnoreCase(rickMorty)){
+
+        }
     }
 }

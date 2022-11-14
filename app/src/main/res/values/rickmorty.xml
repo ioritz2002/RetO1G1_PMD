@@ -43,39 +43,43 @@
         <item>Una Pizza</item>
         <item>Que te devuelvan 7 cajas de valerianas</item>
     </string-array>
-    <string-array name="Rick">
-        <item name="puntuacion_personaje">5</item>
-        <item name="nombre">Rick Sanchez</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Rick_S%C3%A1nchez?so=search</item>
-    </string-array>
-    <string-array name="Morty">
-        <item name="puntuacion_personaje">10</item>
-        <item name="nombre">Morty Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Morty_Smith?so=search</item>
-    </string-array>
-    <string-array name="Summer">
-        <item name="puntuacion_personaje">15</item>
-        <item name="nombre">Summer Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Summer_Smith?so=search</item>
-    </string-array>
-    <string-array name="Sr. Meeseeks">
-        <item name="puntuacion_personaje">20</item>
-        <item name="nombre">Sr. Meesseks</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Meeseeks</item>
-    </string-array>
-    <string-array name="Jerry">
-        <item name="puntuacion_personaje">25</item>
-        <item name="nombre">Jerry Smith</item>
-        <item name="img_personaje"></item>
-        <item name="vid_personaje"></item>
-        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith?so=search</item>
-    </string-array>
+
+    <array name="Personajes_rickMorty">
+        <string-array name="Rick">
+            <item name="puntuacion_personaje">5</item>
+            <item name="nombre">Rick Sanchez</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Rick_S%C3%A1nchez?so=search</item>
+        </string-array>
+        <string-array name="Morty">
+            <item name="puntuacion_personaje">10</item>
+            <item name="nombre">Morty Smith</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Morty_Smith?so=search</item>
+        </string-array>
+        <string-array name="Summer">
+            <item name="puntuacion_personaje">15</item>
+            <item name="nombre">Summer Smith</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Summer_Smith?so=search</item>
+        </string-array>
+        <string-array name="Sr. Meeseeks">
+            <item name="puntuacion_personaje">20</item>
+            <item name="nombre">Sr. Meesseks</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Meeseeks</item>
+        </string-array>
+        <string-array name="Jerry">
+            <item name="puntuacion_personaje">25</item>
+            <item name="nombre">Jerry Smith</item>
+            <item name="img_personaje"></item>
+            <item name="vid_personaje"></item>
+            <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith?so=search</item>
+        </string-array>
+    </array>
+
 </resources>
