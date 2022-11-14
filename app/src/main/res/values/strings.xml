@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RetoPMD</string>
+    <string name="app_name">Test Personaje de series</string>
     <string name="setName">Nombre:</string>
     <string name="setApel">Apellido:</string>
     <string name="start">Empezar Test</string>

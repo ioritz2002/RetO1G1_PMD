@@ -123,7 +123,6 @@ public class QuestionActivity extends AppCompatActivity {
                 rb[j].setId(j + 1001);
                 // Add button to the
                 rg[i].addView(rb[j]);
-                System.out.println(rb[j].getId());
             }
             rg[i].setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 Integer previousId = 0;

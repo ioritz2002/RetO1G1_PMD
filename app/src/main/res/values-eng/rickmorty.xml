@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="rickmorty_question">
-        <item>1. What you'd like to have?</item>
+        <item>1. What you\'d like to have?</item>
         <item>2. What do you like to drink?</item>
         <item>3. What would you put in the anal rectum?</item>
         <item>4. You have to go to family therapy, what do you do?</item>
