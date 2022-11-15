@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Test Series Character</string>
+    <string name="setName">Name:</string>
+    <string name="setApel">Surname:</string>
+    <string name="start">Start Test</string>
+    <string name="choose">Choose the Series:</string>
+    <string name="start_test">Start test</string>
+    <string name="title_activity_question">Answer the following questions</string>
+    <string name="action_settings">Settings</string>
+    <string name="scroll">Scrollable view</string>
+    <string name="hello">Hello</string>
+    <string-array name="series">
+        <item>Star Wars</item>
+        <item>Rick and Morty</item>
+    </string-array>
+    <string name="text_resultado">You are </string>
+    <string name="text_btnAbrirWiki">Open in the wiki</string>
+    <string name="text_btnCompartir">Share</string>
+    <string name="text_chooserMessage">Select the application you want to open with</string>
+    <string name="text_btnFinish">See Result</string>
+    <string name="error_text">Error you have to insert your name and lastname</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rickmorty_question">
+        <item>1. What you\'d like to have?</item>
+        <item>2. What do you like to drink?</item>
+        <item>3. What would you put in the anal rectum?</item>
+        <item>4. You have to go to family therapy, what do you do?</item>
+        <item>5. Non-profit, what do you prefer?</item>
+    </string-array>
+    <string-array name="rickmorty_opc_1">
+        <item>A Portal Gun</item>
+        <item>A Machine Gun</item>
+        <item>A Space Ship</item>
+        <item>A plane from 9/11</item>
+        <item>A virtual reality headset</item>
+    </string-array>
+
+    <string-array name="rickmorty_opc_2">
+        <item>Beer</item>
+        <item>Mountain Dew</item>
+        <item>Water</item>
+        <item>Milk</item>
+        <item>A protein shake</item>
+    </string-array>
+    <string-array name="rickmorty_opc_3">
+        <item>A seed the size of a coconut</item>
+        <item>A Talking Pickle</item>
+        <item>A Minecraft Cube</item>
+        <item>A Hamster</item>
+        <item>A Dildo</item>
+    </string-array>
+    <string-array name="rickmorty_opc_4">
+        <item>Transform into pickle so as not to go</item>
+        <item>Insult the Therapist</item>
+        <item>Get naked in the middle of therapy</item>
+        <item>Nothing, I have no family</item>
+        <item>Fuck you and go</item>
+    </string-array>
+    <string-array name="rickmorty_opc_5">
+        <item>A pedal boat</item>
+        <item>A Bike</item>
+        <item>A Potato Omelette</item>
+        <item>A Pizza</item>
+        <item>Get 7 boxes of valerian back</item>
+    </string-array>
+
+    <string-array name="Rick">
+        <item name="nombre">Rick Sanchez</item>
+        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Rick_S%C3%A1nchez?so=search</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Morty">
+        <item name="nombre">Morty Smith</item>
+        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Morty_Smith?so=search</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Summer">
+        <item name="nombre">Summer Smith</item>
+        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Summer_Smith?so=search</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="Sr.Meeseeks">
+        <item name="nombre">Sr. Meesseks</item>
+        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Meeseeks</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="Jerry">
+        <item name="nombre">Jerry Smith</item>
+        <item name="url_wiki">https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith?so=search</item>
+        <item>25</item>
+    </string-array>
+</resources>

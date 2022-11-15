@@ -1,0 +1,72 @@
+<resources>
+    <string-array name="starwars_question">
+        <item>1. Que color te gusta mas?</item>
+        <item>2. Que tipo de nave tendrias?</item>
+        <item>3. Que guardarias en la nevera?</item>
+        <item>4. Si tienes 6 niños y 3 sillas, que haces?</item>
+        <item>5. Quien seria tu compañero?</item>
+    </string-array>
+    <string-array name="starwars_opc_1">
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Rojo</item>
+        <item>Morado</item>
+        <item>Amarillo</item>
+    </string-array>
+
+    <string-array name="starwars_opc_2">
+        <item>Halcon Milenario</item>
+        <item>Ala X</item>
+        <item>Tie Fighter</item>
+        <item>Razor Crest</item>
+        <item>Destructor Imperial</item>
+    </string-array>
+    <string-array name="starwars_opc_3">
+        <item>Verduras</item>
+        <item>Coca Cola</item>
+        <item>Leche</item>
+        <item>Helado Oscuro</item>
+        <item>Sopa</item>
+    </string-array>
+    <string-array name="starwars_opc_4">
+        <item>Traigo otras 3 sillas</item>
+        <item>Los otros 3 niños se sientan en el suelo</item>
+        <item>Nada</item>
+        <item>Soy uno de los niños</item>
+        <item>Matar a los niños</item>
+    </string-array>
+    <string-array name="starwars_opc_5">
+        <item>Un Wookie</item>
+        <item>Un Stormtrooper</item>
+        <item>Un Jedi</item>
+        <item>Un Caza Recompensas</item>
+        <item>Un Droide</item>
+    </string-array>
+    <string-array name="Anakin">
+        <item name="nombre">Anakin Skywalker</item>
+        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Anakin_Skywalker?so=search</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="BabyYoda">
+        <item name="nombre">Baby Yoda</item>
+        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Grogu?so=search</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ObiWan">
+        <item name="nombre">Obi-wan kenobi</item>
+        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Obi-Wan_Kenobi</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="Han">
+        <item name="nombre">Han Solo</item>
+        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="Luke">
+        <item name="nombre">Luke Skywalker</item>
+        <item name="url_wiki">https://starwars.fandom.com/es/wiki/Han_Solo?so=search</item>
+        <item>25</item>
+    </string-array>
+
+
+</resources>
